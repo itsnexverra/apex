@@ -4,15 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "node api/index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "cross-env VITE_STANDALONE=true BACKEND_PORT=3001 tsx server.js",
-    "client": "vite --port 3000 --host 0.0.0.0",
-    "build": "vite build && esbuild server.js --bundle --platform=node --format=esm --packages=external --sourcemap --outfile=dist/server.js",
-    "preview": "vite preview",
-    "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
-  },
+  "build": "echo Backend Build",
+  "start": "node server.js"
+}
   "dependencies": {
     "@google/genai": "^2.4.0",
     "@tailwindcss/vite": "^4.1.14",
